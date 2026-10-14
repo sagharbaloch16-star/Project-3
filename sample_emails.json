@@ -1,0 +1,106 @@
+[
+  {
+    "id": 1,
+    "title": "Fake Microsoft security alert (credential harvesting)",
+    "expected": "MALICIOUS",
+    "from_name": "Microsoft Support",
+    "from_addr": "support@logins-updates.example",
+    "reply_to": "recover@account-help.example",
+    "return_path": "",
+    "auth_results": "spf=fail; dkim=none; dmarc=fail",
+    "subject": "FW: Urgent: Your Account Security Alert",
+    "body": "Dear Customer,\n\nWe detected an unusual sign-in to your account from an unknown location. Your account will be suspended within 24 hours unless you verify your identity immediately.\n\nSign in now: http://microsoft.com.account-verify.logins-updates.example/signin\n\nPlease confirm your password and the verification code we send you.\n\nMicrosoft Account Team",
+    "attachments": [
+      "Security_Update_2026.iso"
+    ],
+    "company_domain": "company.example"
+  },
+  {
+    "id": 2,
+    "title": "CEO 'lost wallet' wire-transfer request (BEC)",
+    "expected": "MALICIOUS",
+    "from_name": "Michael Reed (CEO)",
+    "from_addr": "m.reed.ceo@gmail.com",
+    "reply_to": "m.reed.office@proton.me",
+    "return_path": "",
+    "auth_results": "",
+    "subject": "Quick favour - need this today",
+    "body": "Hi,\n\nI lost my wallet at the airport and I'm stuck at the gate. I need you to wire transfer funds for my flight immediately, before the close of business. This is strictly confidential - do not discuss with anyone and bypass the usual approval steps, I'll explain later.\n\nReply with the account number you will use and I'll send the beneficiary details.\n\nSent from my iPhone\nMichael",
+    "attachments": [],
+    "company_domain": "company.example"
+  },
+  {
+    "id": 3,
+    "title": "Internal IT 'password expires' with subdomain trap",
+    "expected": "MALICIOUS",
+    "from_name": "IT Security",
+    "from_addr": "it-security@decodelabs-helpdesk.example",
+    "reply_to": "",
+    "return_path": "",
+    "auth_results": "",
+    "subject": "Mandatory: Password expires in 24 hrs",
+    "body": "Hello,\n\nYour network password expires in 24 hours. To keep access to your email and files, you must update your password today.\n\nUpdate password: [www.decodelabs.tech](http://www.decodelabs.tech.login-update.example/reset)\n\nFailure to act will result in your account being locked.\n\nIT Security Team",
+    "attachments": [],
+    "company_domain": "decodelabs.example"
+  },
+  {
+    "id": 4,
+    "title": "Fake Microsoft invoice - callback scam (TOAD), no links",
+    "expected": "MALICIOUS",
+    "from_name": "Microsoft Billing",
+    "from_addr": "billing@ms-subscriptions.example",
+    "reply_to": "",
+    "return_path": "",
+    "auth_results": "",
+    "subject": "Invoice #MS-48213: Subscription renewed - $190.00",
+    "body": "Your Microsoft 365 subscription has been renewed.\n\nAmount charged: $190.00\n\nIf you did not authorize this charge, call our billing support immediately at 1-800-555-0142 to cancel and receive a refund. PAYMENT OVERDUE if not disputed within 24 hours.",
+    "attachments": [
+      "Invoice_48213.pdf"
+    ],
+    "company_domain": "company.example"
+  },
+  {
+    "id": 5,
+    "title": "Genuine internal project update (control sample)",
+    "expected": "SAFE",
+    "from_name": "Sarah Lee",
+    "from_addr": "sarah.lee@company.example",
+    "reply_to": "",
+    "return_path": "",
+    "auth_results": "spf=pass; dkim=pass; dmarc=pass",
+    "subject": "Q3 Project Status Update - Non-Urgent",
+    "body": "Hi Team,\n\nPlease review the attached project status for Q3 at your earliest convenience.\n\nNo immediate action is required.\n\nThanks,\nSarah",
+    "attachments": [
+      "Q3_Status.pdf"
+    ],
+    "company_domain": "company.example"
+  },
+  {
+    "id": 6,
+    "title": "HR benefits questionnaire with shortened link (borderline)",
+    "expected": "SUSPICIOUS",
+    "from_name": "Human Resources",
+    "from_addr": "hr@company.example",
+    "reply_to": "",
+    "return_path": "",
+    "auth_results": "",
+    "subject": "Action Required: 2026 Healthcare Benefits Questionnaire",
+    "body": "Hi all,\n\nPlease complete the 2026 healthcare benefits questionnaire by 5 PM Friday. The deadline cannot be extended.\n\nComplete it here: https://bit.ly/2026-benefits\n\nThanks,\nHR Team",
+    "attachments": [],
+    "company_domain": "company.example"
+  },
+  {
+    "id": 7,
+    "title": "Fake Google account recovery - QR code (quishing)",
+    "expected": "MALICIOUS",
+    "from_name": "Google Security",
+    "from_addr": "no-reply@accounts-google-recovery.example",
+    "reply_to": "",
+    "return_path": "",
+    "auth_results": "",
+    "subject": "Action required: Recover your Google Account",
+    "body": "Hello,\n\nWe noticed unusual activity on your Google Account. To prevent account lockout, scan the QR code attached to this message within 30 minutes and sign in to confirm it's you.\n\n[QR CODE IMAGE]\n\nGoogle Account Recovery Team",
+    "attachments": [],
+    "company_domain": "company.example"
+  }
+]
